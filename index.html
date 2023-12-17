@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+
+        <link rel="stylesheet" href="/dist/output.css" />
+
+        <title>
+            Frontend Mentor | Newsletter sign-up form with success message
+        </title>
+    </head>
+    <body
+        class="font-roboto md:flex md:justify-center md:items-center md:h-screen"
+    >
+        <!-- Success Modal -->
+        <div
+            class="absolute inset-0 h-full w-full bg-white hidden flex-col justify-center align-start p-10 md:bg-dark-slate-gray md:items-center"
+            id="modal"
+        >
+            <div
+                class="bg-white md:w-[400px] md:h-[500px] rounded-xl flex flex-col justify-between p-10"
+            >
+                <img
+                    src="./assets/images/icon-success.svg"
+                    alt="success image"
+                    class="w-14"
+                />
+                <h1
+                    class="text-4xl font-bold text-dark-slate-gray my-10 md:my-0 md:text-5xl"
+                >
+                    Thanks for subscribing!
+                </h1>
+                <p>
+                    A confirmation email has been sent to
+                    <a
+                        href="#"
+                        id="modal-email"
+                        class="text-charcoal-gray font-bold"
+                        >test</a
+                    >. Please open it and click the button inside to confirm
+                    your subscription.
+                </p>
+                <button
+                    class="text-white my-4 w-3/4 left-1/2 transform -translate-x-1/2 absolute bg-dark-slate-gray font-bold p-4 rounded-xl bottom-4 text-center mx-auto md:relative md:my-0 md:w-full"
+                    id="dismiss-btn"
+                >
+                    Dismiss message
+                </button>
+            </div>
+        </div>
+
+        <!-- Sign up page -->
+        <div
+            class="container md:flex md:items-center md:w-[800px] md:h-[600px] md:flex-row"
+        >
+            <!-- Image -->
+            <div class="md:order-last md:w-1/2">
+                <img
+                    src="assets/images/illustration-sign-up-mobile.svg"
+                    alt="top page illustration"
+                    class="xs:block md:hidden mx-auto"
+                />
+
+                <img
+                    src="assets/images/illustration-sign-up-desktop.svg"
+                    alt="top page illustration"
+                    class="hidden md:block order-last"
+                />
+            </div>
+            <!-- Main Content -->
+            <main class="max-w-[375px] mx-auto p-4">
+                <!-- Header -->
+                <h1 class="text-4xl font-bold text-dark-slate-gray my-5">
+                    Stay updated!
+                </h1>
+                <!-- Subheader -->
+                <h2 class="my-7">
+                    Join 60,000+ product managers receiving monthly updates on:
+                </h2>
+                <!-- Hero List -->
+                <div class="content-list">
+                    <ul>
+                        <li class="flex items-start my-3">
+                            <img
+                                class="mr-4"
+                                src="./assets/images/icon-list.svg"
+                                alt="list icon"
+                            />
+                            Product discovery and building what matters
+                        </li>
+                        <li class="flex items-start my-3">
+                            <img
+                                class="mr-4"
+                                src="./assets/images/icon-list.svg"
+                                alt="list icon"
+                            />Measuring to ensure updates are a success
+                        </li>
+                        <li class="flex items-start my-3">
+                            <img
+                                class="mr-4"
+                                src="./assets/images/icon-list.svg"
+                                alt="list icon"
+                            />And much more!
+                        </li>
+                    </ul>
+                </div>
+                <!-- Form -->
+
+                <form id="form" class="mt-10">
+                    <div class="flex justify-between w-full">
+                        <label
+                            class="text-xs font-bold text-dark-slate-gray"
+                            for="email"
+                            >Email address</label
+                        >
+                        <p
+                            id="error"
+                            class="text-tomato display:inline-block text-right text-xs"
+                        ></p>
+                    </div>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="email@company.com"
+                        required
+                        class="border border-gray rounded-xl p-4 w-full my-1"
+                    />
+                    <button
+                        id="button"
+                        class="text-white my-4 w-full bg-dark-slate-gray font-bold p-4 rounded-xl"
+                    >
+                        Subscribe to monthly newsletter
+                    </button>
+                </form>
+            </main>
+        </div>
+        <div class="text-center w-full text-xs bottom-1 md:absolute">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                class="text-tomato"
+                >Frontend Mentor</a
+            >. Coded by <a href="#">Troy Reuther</a>.
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
